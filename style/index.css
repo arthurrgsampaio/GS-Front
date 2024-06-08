@@ -222,7 +222,7 @@ footer {
   background-color: var(--shadow);
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -249,8 +249,9 @@ footer {
   }
 
   .sec {
+    flex-direction: column;
     margin: 0 2rem;
-    gap: 2rem;
+    gap: 1rem; 
     text-align: center;
     padding: 1rem;
   }
@@ -265,12 +266,12 @@ footer {
 
   .sec .biggerSide {
     flex: 1;
-    gap: 1rem;
+    gap: 0.5rem; 
   }
 
   .sec .smallerSide {
     flex: 1;
-    gap: 1rem;
+    gap: 0.5rem; 
   }
 
   .sec .smallerSide .singleImage > img {
@@ -297,6 +298,11 @@ footer {
     font-size: 1rem;
   }
 
+  .sec {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   .sec h2 {
     font-size: 1.5rem;
   }
@@ -306,15 +312,51 @@ footer {
   }
 
   .sec .biggerSide {
-    gap: 0.5rem;
+    gap: 0.3rem; 
   }
 
   .sec .smallerSide {
-    gap: 0.5rem;
+    gap: 0.3rem; 
   }
 
   .sec .smallerSide .doubleImage img {
     height: auto;
     width: 48%;
+  }
+
+  .sec.sec1 .biggerSide,
+  .sec.sec4 .biggerSide {
+    order: 1;
+  }
+
+  .sec.sec1 .smallerSide,
+  .sec.sec4 .smallerSide {
+    order: 2;
+  }
+
+  .sec.sec1 .smallerSide .singleImage > img,
+  .sec.sec4 .smallerSide .singleImage > img {
+    width: 100%;
+    height: auto;
+    margin-top: -10px; 
+  }
+
+  .sec.sec2 .smallerSide,
+  .sec.sec3 .smallerSide {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .sec.sec2 .smallerSide .doubleImage,
+  .sec.sec3 .smallerSide .doubleImage {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sec.sec2 .smallerSide .doubleImage img,
+  .sec.sec3 .smallerSide .doubleImage img {
+    width: 48%;
+    height: auto;
   }
 }
